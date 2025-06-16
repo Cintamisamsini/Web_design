@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <meta charset="UTF-8"> <!--Menjamin tampilan teks benar (termasuk karakter khusus)-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!--Membuat halaman responsif di semua ukuran layar perangkat-->
+    <title>UNKLAB Registration Form for New Student</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"> <!--Menghubungkan styling dasar dari Bootstrap, framework CSS populer untuk desain cepat dan responsif.-->
+    <style>
+        body {
+            background-color: #f8f9fa;
+            padding: 20px;
+        }
+        .container {
+            max-width: 900px;
+            background-color: #ffffff;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .form-section {
+            border: 1px solid #dee2e6;
+            border-radius: 5px;
+            padding: 20px;
+            margin-bottom: 25px;
+            background-color: #fdfdfd;
+        }
+        .form-section-title {
+            background-color: #e9ecef;
+            padding: 10px 15px;
+            margin: -20px -20px 20px -20px;
+            border-bottom: 1px solid #dee2e6;
+            border-top-left-radius: 5px;
+            border-top-right-radius: 5px;
+            font-weight: bold;
+        }
+        .form-check-inline {
+            margin-right: 15px;
+        }
+        .form-control-sm {
+            height: calc(1.5em + 0.5rem + 2px); /* Adjust height for smaller inputs */
+            padding: 0.25rem 0.5rem;
+            font-size: 0.875rem;
+            border-radius: 0.2rem;
+        }
+        .row.g-3 > .col {
+            padding-right: var(--bs-gutter-x, 0.75rem);
+            padding-left: var(--bs-gutter-x, 0.75rem);
+        }
+        .col-md-auto {
+            flex: 0 0 auto;
+            width: auto;
+        }
+        .col-md-6, .col-md-4, .col-md-3, .col-12 {
+            padding-right: var(--bs-gutter-x, 0.75rem);
+            padding-left: var(--bs-gutter-x, 0.75rem);
+        }
+    </style>
+</head>
+<body>
+    <div class="container"> <!--Kotak utama yang menampung seluruh formulir, membuat konten terpusat dan rapi.-->
+        <h2 class="mb-4 text-center">UNKLAB Registration Form for New Student</h2>
+
+        <div class="form-section"> <!--Setiap blok Personal Information dengan border dan background terpisah, membuat formulir terstruktur.-->
+            <div class="form-section-title">Registration Number</div>
+            <div class="row g-3 align-items-center"> <!--Sistem kisi (grid) Bootstrap untuk mengatur input berdampingan secara responsif.-->
+                <div class="col-md-auto">
+                    <label for="registrationNumber" class="col-form-label">Registration Number :</label> <!--Teks penjelas untuk setiap kotak isian-->
+                </div>
+                <div class="col-auto">
+                    <input type="text" id="registrationNumber" class="form-control form-control-sm" style="width: 250px;"> <!--Kotak isian teks biasa.-->
+                </div>
+            </div>
+        </div>
+
+        <div class="form-section">
+            <div class="form-section-title">Personal Information</div>
+            <div class="row g-3 mb-3">
+                <div class="col-md-6">
+                    <label for="firstName" class="form-label">First Name :</label>
+                    <input type="text" class="form-control form-control-sm" id="firstName">
+                </div>
+                <div class="col-md-6">
+                    <label for="fullName" class="form-label">Full Name :</label>
+                    <input type="text" class="form-control form-control-sm" id="fullName">
+                </div>
+            </div>
+            <div class="row g-3 mb-3 align-items-center">
+                <div class="col-md-6">
+                    <label for="birthplace" class="form-label">Birthplace :</label>
+                    <input type="text" class="form-control form-control-sm" id="birthplace">
+                </div>
+                <div class="col-md-6 d-flex align-items-center">
+                    <label for="dateOfBirth" class="form-label me-2 mb-0">Date of Birth :</label>
+                    <input type="text" class="form-control form-control-sm" id="dateOfBirth" placeholder="dd/mm/yyyy" style="max-width: 150px;">
+                    <button class="btn btn-outline-secondary btn-sm ms-2" type="button">🗓️</button>
+                </div>
+            </div>
+            <div class="row g-3 mb-3">
+                <div class="col-md-6 d-flex align-items-center">
+                    <label class="form-label me-3 mb-0">Gender :</label>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="gender" id="male" value="male"> <!-- Pilihan yang hanya bisa dipilih satu (misal: jenis kelamin).-->
+                        <label class="form-check-label" for="male">Male</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="gender" id="female" value="female">
+                        <label class="form-check-label" for="female">Female</label>
+                    </div>
+                </div>
+                <div class="col-md-6 d-flex align-items-center">
+                    <label class="form-label me-3 mb-0">Blood Type :</label>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="bloodType" id="a" value="A">
+                        <label class="form-check-label" for="a">A</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="bloodType" id="b" value="B">
+                        <label class="form-check-label" for="b">B</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="bloodType" id="ab" value="AB">
+                        <label class="form-check-label" for="ab">AB</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="bloodType" id="o" value="O">
+                        <label class="form-check-label" for="o">O</label>
+                    </div>
+                </div>
+            </div>
+            <div class="row g-3 mb-3">
+                <div class="col-md-6">
+                    <label for="tribe" class="form-label">Tribe :</label>
+                    <input type="text" class="form-control form-control-sm" id="tribe">
+                </div>
+                <div class="col-md-6">
+                    <label for="email" class="form-label">Email :</label>
+                    <input type="email" class="form-control form-control-sm" id="email">
+                </div>
+            </div>
+            <div class="row g-3 mb-3">
+                <div class="col-md-6 d-flex align-items-center">
+                    <label for="telephoneNumber" class="form-label me-2 mb-0">Telephone Number :</label>
+                    <input type="text" class="form-control form-control-sm" id="telephoneNumber" style="max-width: 150px;">
+                </div>
+                <div class="col-md-6 d-flex align-items-center">
+                    <label for="mobileNumber" class="form-label me-2 mb-0">Mobile Number :</label>
+                    <input type="text" class="form-control form-control-sm" id="mobileNumber" style="max-width: 150px;">
+                </div>
+            </div>
+            <div class="row g-3 mb-3">
+                <div class="col-md-6 d-flex align-items-center">
+                    <label for="status" class="form-label me-2 mb-0">Status :</label>
+                    <select class="form-select form-select-sm" id="status" style="max-width: 150px;">
+                        <option selected>Single</option>
+                        <option>Married</option>
+                        <option>Divorced</option>
+                    </select>
+                </div>
+                <div class="col-md-6 d-flex align-items-center">
+                    <label for="religion" class="form-label me-2 mb-0">Religion :</label>
+                    <select class="form-select form-select-sm" id="religion" style="max-width: 150px;"> <!--Kotak pilihan dropdown (misal: status, agama).-->
+                        <option selected>Seventh Day Adventist</option>
+                        <option>Christian</option>
+                        <option>Islam</option>
+                        <option>Buddhist</option>
+                        <option>Hindu</option>
+                    </select>
+                </div>
+            </div>
+            <div class="mb-3">
+                <label for="homeAddress" class="form-label">Home Address :</label>
+                <textarea class="form-control" id="homeAddress" rows="3"></textarea> <!--Kotak isian teks multi-baris (misal: alamat-->
+            </div>
+            <div class="mb-3">
+                <label for="postalCode" class="form-label">Postal Code :</label>
+                <input type="text" class="form-control form-control-sm" id="postalCode" style="max-width: 150px;">
+            </div>
+        </div>
+
+        <div class="form-section">
+            <div class="form-section-title">School Information</div>
+            <div class="row g-3 mb-3">
+                <div class="col-md-6">
+                    <label for="highSchoolName" class="form-label">High School's Name :</label>
+                    <input type="text" class="form-control form-control-sm" id="highSchoolName">
+                </div>
+            </div>
+            <div class="row g-3 mb-3">
+                <div class="col-md-6">
+                    <label for="program" class="form-label">Program :</label>
+                    <input type="text" class="form-control form-control-sm" id="program">
+                </div>
+                <div class="col-md-6 d-flex align-items-center">
+                    <label for="schoolTelephoneNumber" class="form-label me-2 mb-0">Telephone Number :</label>
+                    <input type="text" class="form-control form-control-sm" id="schoolTelephoneNumber" style="max-width: 150px;">
+                </div>
+            </div>
+            <div class="mb-3">
+                <label for="schoolAddress" class="form-label">School's Address :</label>
+                <textarea class="form-control" id="schoolAddress" rows="3"></textarea>
+            </div>
+            <div class="mb-3">
+                <label for="schoolPostalCode" class="form-label">Postal Code :</label>
+                <input type="text" class="form-control form-control-sm" id="schoolPostalCode" style="max-width: 150px;">
+            </div>
+        </div>
+
+        <div class="form-section">
+            <div class="form-section-title">Parent's Information</div>
+            <div class="row g-3 mb-3">
+                <div class="col-md-6">
+                    <label for="fathersName" class="form-label">Father's Name :</label>
+                    <input type="text" class="form-control form-control-sm" id="fathersName">
+                </div>
+                <div class="col-md-6 d-flex align-items-center">
+                    <label for="parentMobileNumber" class="form-label me-2 mb-0">Mobile Number :</label>
+                    <input type="text" class="form-control form-control-sm" id="parentMobileNumber" style="max-width: 150px;">
+                </div>
+            </div>
+            <div class="row g-3 mb-3">
+                <div class="col-md-6 d-flex align-items-center">
+                    <label for="parentEducation" class="form-label me-2 mb-0">Education :</label>
+                    <select class="form-select form-select-sm" id="parentEducation" style="max-width: 150px;">
+                        <option selected>Elementary</option>
+                        <option>Junior High School</option>
+                        <option>Senior High School</option>
+                        <option>Bachelor's Degree</option>
+                        <option>Master's Degree</option>
+                        <option>Doctorate</option>
+                    </select>
+                </div>
+                <div class="col-md-6 d-flex align-items-center">
+                    <label for="parentReligion" class="form-label me-2 mb-0">Religion :</label>
+                    <select class="form-select form-select-sm" id="parentReligion" style="max-width: 150px;">
+                        <option selected>SDA</option>
+                        <option>Christian</option>
+                        <option>Islam</option>
+                    </select>
+                </div>
+            </div>
+            <div class="row g-3 mb-3">
+                <div class="col-md-6">
+                    <label for="mothersName" class="form-label">Mother's Name :</label>
+                    <input type="text" class="form-control form-control-sm" id="mothersName">
+                </div>
+                <div class="col-md-6 d-flex align-items-center">
+                    <label for="motherMobileNumber" class="form-label me-2 mb-0">Mobile Number :</label>
+                    <input type="text" class="form-control form-control-sm" id="motherMobileNumber" style="max-width: 150px;">
+                </div>
+            </div>
+            <div class="row g-3 mb-3">
+                <div class="col-md-6 d-flex align-items-center">
+                    <label for="motherEducation" class="form-label me-2 mb-0">Education :</label>
+                    <select class="form-select form-select-sm" id="motherEducation" style="max-width: 150px;">
+                        <option selected>Elementary</option>
+                        <option>Junior High School</option>
+                        <option>Senior High School</option>
+                        <option>Bachelor's Degree</option>
+                        <option>Master's Degree</option>
+                        <option>Doctorate</option>
+                    </select>
+                </div>
+                <div class="col-md-6 d-flex align-items-center">
+                    <label for="motherReligion" class="form-label me-2 mb-0">Religion :</label>
+                    <select class="form-select form-select-sm" id="motherReligion" style="max-width: 150px;">
+                        <option selected>SDA</option>
+                        <option>Christian</option>
+                        <option>Islam</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+
+        <div class="form-section">
+            <div class="form-section-title">Parent/Carer's Information</div>
+            <div class="row g-3 mb-3">
+                <div class="col-md-6">
+                    <label for="carerFullName" class="form-label">Full Name :</label>
+                    <input type="text" class="form-control form-control-sm" id="carerFullName">
+                </div>
+                <div class="col-md-6">
+                    <label for="carerEmail" class="form-label">Email :</label>
+                    <input type="email" class="form-control form-control-sm" id="carerEmail">
+                </div>
+            </div>
+            <div class="row g-3 mb-3">
+                <div class="col-md-6">
+                    <label for="familyRelation" class="form-label">Family Relation :</label>
+                    <input type="text" class="form-control form-control-sm" id="familyRelation">
+                </div>
+                <div class="col-md-6">
+                    <label for="carerMobileNumber" class="form-label">Mobile Number :</label>
+                    <input type="text" class="form-control form-control-sm" id="carerMobileNumber">
+                </div>
+            </div>
+            <div class="row g-3 mb-3">
+                <div class="col-md-6 d-flex align-items-center">
+                    <label for="homePhoneNumber" class="form-label me-2 mb-0">Home Phone Number :</label>
+                    <input type="text" class="form-control form-control-sm" id="homePhoneNumber" style="max-width: 150px;">
+                </div>
+            </div>
+            <div class="row g-3 mb-3">
+                <div class="col-md-6 d-flex align-items-center">
+                    <label for="carerEducation" class="form-label me-2 mb-0">Education :</label>
+                    <select class="form-select form-select-sm" id="carerEducation" style="max-width: 150px;">
+                        <option selected>Elementary</option>
+                        <option>Junior High School</option>
+                        <option>Senior High School</option>
+                        <option>Bachelor's Degree</option>
+                        <option>Master's Degree</option>
+                        <option>Doctorate</option>
+                    </select>
+                </div>
+                <div class="col-md-6 d-flex align-items-center">
+                    <label for="carerReligion" class="form-label me-2 mb-0">Religion :</label>
+                    <select class="form-select form-select-sm" id="carerReligion" style="max-width: 150px;">
+                        <option selected>SDA</option>
+                        <option>Christian</option>
+                        <option>Islam</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+
+        <div class="form-check mb-4">
+            <input class="form-check-input" type="checkbox" value="" id="declarationCheck">
+            <label class="form-check-label" for="declarationCheck">
+                I hereby state that all information on this New Student Registration Form are complete and true.<br>
+                All contents on this form I submitted to Universitas Klabat and Universitas Klabat are not oblidge to return it.
+            </label>
+        </div>
+
+        <div class="row g-3 mb-4 align-items-center">
+            <div class="col-md-auto">
+                <label for="arirmadiDate" class="form-label me-2 mb-0">Airmadi, dd/mm/yyyy</label>
+                <input type="text" class="form-control form-control-sm" id="arirmadiDate" placeholder="dd/mm/yyyy" style="max-width: 150px; display: inline-block;">
+                <button class="btn btn-outline-secondary btn-sm ms-2" type="button">🗓️</button>
+            </div>
+        </div>
+
+        <div class="d-flex justify-content-start">
+            <button type="button" class="btn btn-secondary me-2" data-bs-toggle="modal" data-bs-target="#resetConfirmModal">Reset Form</button>
+            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#registerConfirmModal">Register</button>
+        </div>
+
+    </div>
+
+    <div class="modal fade" id="resetConfirmModal" tabindex="-1" aria-labelledby="resetConfirmModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="resetConfirmModalLabel">Konfirmasi Reset Form</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button> <!--berfungsi untuk membuka jendela pop-up (modal) Bootstrap.-->
+                </div>
+                <div class="modal-body">
+                    Apakah Anda yakin ingin mereset semua isian formulir?
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Batal</button>
+                    <button type="reset" class="btn btn-danger" onclick="document.forms[0].reset(); $('#resetConfirmModal').modal('hide');">Reset</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="registerConfirmModal" tabindex="-1" aria-labelledby="registerConfirmModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="registerConfirmModalLabel">Konfirmasi Pendaftaran</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button> <!--Kotak centang (misal: persetujuan)-->
+                </div>
+                <div class="modal-body">
+                    Apakah Anda yakin semua informasi sudah benar dan ingin mendaftar?
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Batal</button>
+                    <button type="submit" class="btn btn-primary" onclick="alert('Formulir berhasil didaftarkan!'); $('#registerConfirmModal').modal('hide');">Daftar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script> <!-- Menghubungkan script Bootstrap yang mengaktifkan fungsionalitas komponen seperti modal.
+-->
+    <!--Kode ini adalah pendengar kejadian (event listener). Artinya, ketika tombol tertentu diklik, fungsi di dalamnya akan dijalankan.-->
+    <script>
+        document.querySelector('#resetConfirmModal button[type="reset"]').onclick = function() {
+            document.querySelector('form').reset(); // Assuming the form is the first one in the document
+            var resetModal = bootstrap.Modal.getInstance(document.getElementById('resetConfirmModal'));
+            if (resetModal) {
+                resetModal.hide();
+            }
+        };
+
+        document.querySelector('#registerConfirmModal button[type="submit"]').onclick = function() {
+            alert('Formulir berhasil didaftarkan!'); // Simulate form submission
+            var registerModal = bootstrap.Modal.getInstance(document.getElementById('registerConfirmModal'));
+            if (registerModal) {
+                registerModal.hide();
+            }
+           
+        };
+    </script>
+</body>
+</html>
+
